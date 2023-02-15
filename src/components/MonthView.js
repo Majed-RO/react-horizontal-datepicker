@@ -53,12 +53,12 @@ const MonthView = ({
 			months.push(
 				<div
 					id={`${getId(month)}`}
-					className={styles.monthContainer}
+					className={'monthContainer'}
 					key={month}
 					style={getStyles(month)}
 					onClick={() => onDateClick(month)}
 				>
-					<span className={styles.monthYearLabel}>
+					<span className={'monthYearLabel'}>
 						{format(
 							month,
 							labelFormat ||
@@ -70,10 +70,7 @@ const MonthView = ({
 		}
 
 		return (
-			<div
-				id={'container'}
-				className={styles.dateListScrollable}
-			>
+			<div id={'container'} className={'dateListScrollable'}>
 				{months}
 			</div>
 		);

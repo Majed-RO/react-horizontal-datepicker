@@ -2,7 +2,7 @@
 import { addDays } from 'date-fns';
 import React from 'react';
 import hexToRgb from '../global/helpers/hexToRgb';
-import styles from './DatePicker.module.css';
+// import styles from './DatePicker.module.css';
 import { DateView } from './DateView';
 import { MonthView } from './MonthView';
 
@@ -41,13 +41,10 @@ const DatePicker = props => {
 	}
 
 	return (
-		<div className={styles.container}>
-			<div
-				className={styles.buttonWrapper}
-				style={buttonzIndex}
-			>
+		<div className={'container'}>
+			<div className={'buttonWrapper'} style={buttonzIndex}>
 				<button
-					className={styles.button}
+					className={'button'}
 					style={buttonStyle}
 					onClick={prev}
 				>
@@ -72,12 +69,9 @@ const DatePicker = props => {
 				selectedDateStyles={props.selectedDateStyles}
 				selectedDayStyles={props.selectedDayStyles}
 			/>
-			<div
-				className={styles.buttonWrapper}
-				style={buttonzIndex}
-			>
+			<div className={'buttonWrapper'} style={buttonzIndex}>
 				<button
-					className={styles.button}
+					className={'button'}
 					style={buttonStyle}
 					onClick={next}
 				>

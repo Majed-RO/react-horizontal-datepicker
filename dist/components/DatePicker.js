@@ -3,7 +3,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 import { addDays } from 'date-fns';
 import React from 'react';
 import hexToRgb from '../global/helpers/hexToRgb';
-import styles from './DatePicker.module.css';
+// import styles from './DatePicker.module.css';
 import { DateView } from './DateView';
 import { MonthView } from './MonthView';
 const DatePicker = props => {
@@ -41,12 +41,12 @@ const DatePicker = props => {
     };
   }
   return /*#__PURE__*/React.createElement("div", {
-    className: styles.container
+    className: 'container'
   }, /*#__PURE__*/React.createElement("div", {
-    className: styles.buttonWrapper,
+    className: 'buttonWrapper',
     style: buttonzIndex
   }, /*#__PURE__*/React.createElement("button", {
-    className: styles.button,
+    className: 'button',
     style: buttonStyle,
     onClick: prev
   }, /*#__PURE__*/React.createElement("svg", {
@@ -64,10 +64,10 @@ const DatePicker = props => {
     selectedDateStyles: props.selectedDateStyles,
     selectedDayStyles: props.selectedDayStyles
   })), /*#__PURE__*/React.createElement("div", {
-    className: styles.buttonWrapper,
+    className: 'buttonWrapper',
     style: buttonzIndex
   }, /*#__PURE__*/React.createElement("button", {
-    className: styles.button,
+    className: 'button',
     style: buttonStyle,
     onClick: next
   }, /*#__PURE__*/React.createElement("svg", {

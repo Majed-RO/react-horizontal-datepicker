@@ -66,7 +66,7 @@ const DateView = ({
         style: {
           ...(markedRes?.style ?? markedStyle)
         },
-        className: styles.markedLabel
+        className: 'markedLabel'
       }, markedRes.text);
     }
     return '';
@@ -88,33 +88,33 @@ const DateView = ({
         let currentDay = addDays(month, j);
         days.push( /*#__PURE__*/React.createElement("div", {
           id: `${getId(currentDay)}`,
-          className: marked ? styles.dateDayItemMarked : styles.dateDayItem,
+          className: marked ? 'dateDayItemMarked' : 'dateDayItem',
           style: getStyles(currentDay),
           key: currentDay,
           onClick: () => onDateClick(currentDay)
         }, /*#__PURE__*/React.createElement("div", {
-          className: styles.dateLabel,
+          className: 'dateLabel',
           style: getStyles(currentDay, 'date')
         }, format(currentDay, dateFormat)), /*#__PURE__*/React.createElement("div", {
-          className: styles.dayLabel,
+          className: 'dayLabel',
           style: getStyles(currentDay, 'day')
         }, format(currentDay, dayFormat)), getMarked(currentDay)));
       }
       months.push( /*#__PURE__*/React.createElement("div", {
-        className: styles.monthContainer,
+        className: 'monthContainer',
         key: month
       }, /*#__PURE__*/React.createElement("span", {
-        className: styles.monthYearLabel,
+        className: 'monthYearLabel',
         style: labelColor
       }, format(month, labelFormat || 'MMMM yyyy')), /*#__PURE__*/React.createElement("div", {
-        className: styles.daysContainer,
+        className: 'daysContainer',
         style: i === 0 ? firstSection : null
       }, days)));
       days = [];
     }
     return /*#__PURE__*/React.createElement("div", {
       id: 'container',
-      className: styles.dateListScrollable
+      className: 'dateListScrollable'
     }, months);
   };
   const onDateClick = day => {

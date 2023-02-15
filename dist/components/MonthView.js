@@ -31,17 +31,17 @@ const MonthView = ({
       const month = startOfMonth(addMonths(startDate, i));
       months.push( /*#__PURE__*/React.createElement("div", {
         id: `${getId(month)}`,
-        className: styles.monthContainer,
+        className: 'monthContainer',
         key: month,
         style: getStyles(month),
         onClick: () => onDateClick(month)
       }, /*#__PURE__*/React.createElement("span", {
-        className: styles.monthYearLabel
+        className: 'monthYearLabel'
       }, format(month, labelFormat || 'MMMM yyyy'))));
     }
     return /*#__PURE__*/React.createElement("div", {
       id: 'container',
-      className: styles.dateListScrollable
+      className: 'dateListScrollable'
     }, months);
   };
   const onDateClick = day => {

@@ -77,7 +77,7 @@ const DateView = ({
 						...(markedRes?.style ??
 							markedStyle)
 					}}
-					className={styles.markedLabel}
+					className={'markedLabel'}
 				>
 					{markedRes.text}
 				</div>
@@ -133,8 +133,8 @@ const DateView = ({
 						id={`${getId(currentDay)}`}
 						className={
 							marked
-								? styles.dateDayItemMarked
-								: styles.dateDayItem
+								? 'dateDayItemMarked'
+								: 'dateDayItem'
 						}
 						style={getStyles(currentDay)}
 						key={currentDay}
@@ -143,9 +143,7 @@ const DateView = ({
 						}
 					>
 						<div
-							className={
-								styles.dateLabel
-							}
+							className={'dateLabel'}
 							style={getStyles(
 								currentDay,
 								'date'
@@ -157,9 +155,7 @@ const DateView = ({
 							)}
 						</div>
 						<div
-							className={
-								styles.dayLabel
-							}
+							className={'dayLabel'}
 							style={getStyles(
 								currentDay,
 								'day'
@@ -176,14 +172,9 @@ const DateView = ({
 				);
 			}
 			months.push(
-				<div
-					className={styles.monthContainer}
-					key={month}
-				>
+				<div className={'monthContainer'} key={month}>
 					<span
-						className={
-							styles.monthYearLabel
-						}
+						className={'monthYearLabel'}
 						style={labelColor}
 					>
 						{format(
@@ -193,7 +184,7 @@ const DateView = ({
 						)}
 					</span>
 					<div
-						className={styles.daysContainer}
+						className={'daysContainer'}
 						style={
 							i === 0
 								? firstSection
@@ -208,10 +199,7 @@ const DateView = ({
 		}
 
 		return (
-			<div
-				id={'container'}
-				className={styles.dateListScrollable}
-			>
+			<div id={'container'} className={'dateListScrollable'}>
 				{months}
 			</div>
 		);
