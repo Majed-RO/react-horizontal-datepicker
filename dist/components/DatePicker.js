@@ -3,7 +3,6 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 import { addDays } from 'date-fns';
 import React from 'react';
 import hexToRgb from '../global/helpers/hexToRgb';
-// import styles from './DatePicker.module.css';
 import { DateView } from './DateView';
 import { MonthView } from './MonthView';
 const DatePicker = props => {
